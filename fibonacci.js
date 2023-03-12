@@ -39,3 +39,8 @@ function fibonacciI(n) {
 
     return output;
 }
+
+function fibonacciRSingleEl(n) {
+    return (n <= 2) ? n - 1 : fibonacciRSingleEl(n - 1) + fibonacciRSingleEl(n - 2);
+}
+
