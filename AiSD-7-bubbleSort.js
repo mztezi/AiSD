@@ -3,7 +3,7 @@ function swapNeat(arr, index1, index2) {
 }
 
 function swap(arr, index1, index2) {
-    let tempVal = arr[index1];
+    const tempVal = arr[index1];
     arr[index1] = arr[index2];
     arr[index2] = tempVal;
 }
