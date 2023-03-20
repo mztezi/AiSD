@@ -1,12 +1,4 @@
-function swapNeat(arr, index1, index2) {
-    [arr[index1], arr[index2]] = [arr[index2], arr[index1]];
-}
-
-function swap(arr, index1, index2) {
-    const tempVal = arr[index1];
-    arr[index1] = arr[index2];
-    arr[index2] = tempVal;
-}
+import { swap } from './src/swap.js';
 
 function bubbleSort(arr) {
     let swapped;
@@ -21,6 +13,23 @@ function bubbleSort(arr) {
             }
         }
     } while (swapped)
+}
+
+function bubbleSortAlt(arr) {
+    let swapped;
+
+    for( ; ; k++) {
+        swapped = false;
+
+        for (let i = 0; i < arr.length - 1; i++) {
+            if (arr[i + 1] < arr[i]) {
+                swap(arr, i, i + 1);
+                swapped = true;
+            }
+        }
+
+        if (!swapped) break;
+    }
 }
 
 function bubbleSortOpt(arr) {
