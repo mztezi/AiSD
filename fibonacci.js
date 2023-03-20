@@ -27,17 +27,15 @@ function fibonacciI(n) {
         return n - 1;
     }
 
-    let output = 0;
     let n_minus_1 = 1;
     let n_minus_2 = 0;
 
-    for (let i = 3; i <= n; i++) {
-        output = n_minus_1 + n_minus_2;
-        n_minus_2 = n_minus_1;
-        n_minus_1 = output;
+    for (let i = 4; i <= n; i++) {
+        n_minus_1 = n_minus_1 + n_minus_2;
+        n_minus_2 = n_minus_1 - n_minus_2;
     }
 
-    return output;
+    return n_minus_1 + n_minus_2;
 }
 
 function fibonacciRSingleEl(n) {
