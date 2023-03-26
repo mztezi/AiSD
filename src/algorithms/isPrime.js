@@ -7,7 +7,7 @@ function isPrime(n) {
         return false;
     }
 
-    const SqRoot = Math.sqrt(n);
+    const sqRoot = Math.sqrt(n);
 
     for (let i = 3; i <= SqRoot; i += 2) {
         if (n % i === 0) {
