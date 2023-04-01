@@ -1,7 +1,7 @@
-import { swap } from "../swap.js";
+import { swap } from "../common/swap.js";
 
 function partition(arr, low, high) {
-  let pivot = arr[high];
+  const pivot = arr[high];
   let i = low - 1;
 
   for (let j = low; j < high; j++) {
