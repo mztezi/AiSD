@@ -1,4 +1,4 @@
-import { swap } from "../swap.js";
+import { swap } from "../common/swap.js";
 
 function insertionSort(arr) {
   for (let i = 1; i <= arr.length; i++) {
