@@ -19,4 +19,4 @@ function isPowerOfTwoBitWise(n) {
     }
 
     return (n & (n - 1)) === 0;
-}
+}         
