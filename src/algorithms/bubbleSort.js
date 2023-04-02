@@ -1,4 +1,4 @@
-import { swap } from "../swap.js";
+import { swap } from "../common/swap.js";
 
 function bubbleSort(arr) {
   let swapped;

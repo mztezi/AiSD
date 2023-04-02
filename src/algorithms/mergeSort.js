@@ -11,13 +11,11 @@ function mergeSort(arr) {
 }
 
 function merge(left, right) {
-    let output = [];
+    const sorted = [];
 
     while (left.length && right.length) {
-        left[0] < right[0] ? output.push(left.shift()) : output.push(right.shift());
+        sorted.push((left[0] < right[0] ? left : right).shift());
     }
 
-    output = [...output, ...left, ...right];
-
-    return output;
+    return [...sorted, ...left, ...right];
 }
