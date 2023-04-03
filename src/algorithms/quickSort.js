@@ -17,7 +17,7 @@ function partition(arr, low, high) {
   return i;
 }
 
-function quickSort(arr, low = 0, high = arr.length - 1) {
+export function quickSort(arr, low = 0, high = arr.length - 1) {
   if (low >= high || low < 0) {
     return;
   }

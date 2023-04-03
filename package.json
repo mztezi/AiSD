@@ -4,10 +4,13 @@
   "description": "",
   "main": "AiSD-3-factorial.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jasmine"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "jasmine": "^4.6.0"
+  }
 }

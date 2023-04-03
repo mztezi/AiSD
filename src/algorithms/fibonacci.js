@@ -1,5 +1,5 @@
 function fibonacci(n) {
-        return [...Array(n).keys()].reduce((acc, _, index) => [...acc, (index <= 1) ? index : (acc[index - 1] + acc[index - 2])], []);
+    return [...Array(n).keys()].reduce((acc, _, index) => [...acc, (index <= 1) ? index : (acc[index - 1] + acc[index - 2])], []);
 }
 
 function fibonacciR(n) {
@@ -14,7 +14,7 @@ function fibonacciR(n) {
     return output;
 }
 
-function fibonacciI(n) {
+export function fibonacciI(n) {
     if (n <= 2) {
         return n - 1;
     }

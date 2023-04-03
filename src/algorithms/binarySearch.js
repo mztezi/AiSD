@@ -1,4 +1,4 @@
-function binarySearch(arr, target) {
+export function binarySearch(arr, target) {
 
     let leftIndex = 0;
     let rightIndex = arr.length - 1;
@@ -23,7 +23,7 @@ function binarySearch(arr, target) {
     return -1;
 }
 
-function binarySearchRec(arr, target, leftIndex = 0, rightIndex = (arr.length - 1)) {
+export function binarySearchRec(arr, target, leftIndex = 0, rightIndex = (arr.length - 1)) {
     if (leftIndex > rightIndex) {
         return -1;
     }
