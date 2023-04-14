@@ -1,7 +1,7 @@
 import { fibonacciI } from "./fibonacci.js";
 
 describe('fibonacci', () => {
-    it('should return n-th fibonacci number for given n', () => {
+    it('should return 0', () => {
         //assign
         const nNumber = 1;
 
@@ -12,7 +12,7 @@ describe('fibonacci', () => {
         expect(nFibo).toEqual(0);
     })
 
-    it('should return n-th fibonacci number for given n', () => {
+    it('should return 1', () => {
         //assign
         const nNumber = 2;
 
@@ -23,7 +23,7 @@ describe('fibonacci', () => {
         expect(nFibo).toEqual(1);
     })
 
-    it('should return n-th fibonacci number for given n', () => {
+    it('should return 1', () => {
         //assign
         const nNumber = 3;
 
@@ -34,7 +34,7 @@ describe('fibonacci', () => {
         expect(nFibo).toEqual(1);
     })
 
-    it('should return n-th fibonacci number for given n', () => {
+    it('should return 34', () => {
         //assign
         const nNumber = 10;
 

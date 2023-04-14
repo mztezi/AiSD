@@ -1,7 +1,7 @@
 import { insertionSort } from "./insertionSort.js";
 
 describe('insertionSort', () => {
-    it('should sort array', () => {
+    it('should return empty array', () => {
         //assign
         const arr = [];
 
@@ -12,7 +12,7 @@ describe('insertionSort', () => {
         expect(arr).toEqual([]);
     })
 
-    it('should sort array', () => {
+    it('should return [1]', () => {
         //assign
         const arr = [1];
 
@@ -23,7 +23,7 @@ describe('insertionSort', () => {
         expect(arr).toEqual([1]);
     })
 
-    it('should sort array', () => {
+    it('should return [-2, 0, 1, 2, 3]', () => {
         //assign
         const arr = [1, 2, 0, -2, 3];
 

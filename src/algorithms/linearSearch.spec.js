@@ -1,7 +1,7 @@
 import { linearSearch } from "./linearSearch.js";
 
 describe('linearSearch', () => {
-    it('should return index of a given number in a given array', () => {
+    it('should return 2', () => {
         //assign
         const arr = [0, 1, -3, 5, 8, -1];
         const testNumb = -3;
@@ -13,7 +13,7 @@ describe('linearSearch', () => {
         expect(index).toEqual(2);
     })
 
-    it('should return index of a given number in a given array', () => {
+    it('should return -1', () => {
         //assign
         const arr = [0, 1, -3, 5, 8, -1];
         const testNumb = 4;
@@ -25,7 +25,7 @@ describe('linearSearch', () => {
         expect(index).toEqual(-1);
     })
 
-    it('should return index of a given number in a given array', () => {
+    it('should return -1', () => {
         //assign
         const arr = [];
         const testNumb = -3;

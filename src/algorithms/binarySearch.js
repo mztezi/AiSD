@@ -6,16 +6,13 @@ export function binarySearch(arr, target) {
 
     while (leftIndex <= rightIndex) {
         middleIndex = Math.floor((rightIndex + leftIndex) / 2);
+        const valueAtMiddleIndex = arr[middleIndex];
 
-        if (arr[middleIndex] < target) {
+        if (valueAtMiddleIndex < target) {
             leftIndex = middleIndex + 1;
-        }
-
-        else if (arr[middleIndex] > target) {
+        } else if (valueAtMiddleIndex > target) {
             rightIndex = middleIndex - 1;
-        }
-
-        else {
+        } else {
             return middleIndex;
         }
     }

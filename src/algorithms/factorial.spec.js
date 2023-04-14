@@ -1,7 +1,7 @@
 import { factorial } from "./factorial.js";
 
 describe('factorial', () => {
-    it('should return factorial of a given number', () => {
+    it('should return 1', () => {
         //assign
         const testNumber = 0;
 
@@ -12,7 +12,7 @@ describe('factorial', () => {
         expect(factorialOfTestNumber).toEqual(1);
     })
 
-    it('should return factorial of a given number', () => {
+    it('should return 1', () => {
         //assign
         const testNumber = 1;
 
@@ -23,7 +23,7 @@ describe('factorial', () => {
         expect(factorialOfTestNumber).toEqual(1);
     })
 
-    it('should return factorial of a given number', () => {
+    it('should return 120', () => {
         //assign
         const testNumber = 5;
 

@@ -1,7 +1,7 @@
 import { bubbleSortAlt, bubbleSort } from './bubbleSort.js';
 
 describe('bubbleSort', () => {
-    it('should sort array', () => {
+    it('should sort array and return [-6, 0, 1, 4, 7]', () => {
         //assign
         const arr = [1, 4, 0, -6, 7];
 
@@ -12,7 +12,7 @@ describe('bubbleSort', () => {
         expect(arr).toEqual([-6, 0, 1, 4, 7]);
     });
 
-    it('should return initial array', () => {
+    it('should return [1]', () => {
         //assign
         const arr = [1];
 
@@ -20,10 +20,10 @@ describe('bubbleSort', () => {
         bubbleSortAlt(arr);
 
         //assert
-        expect(arr).toEqual(arr);
+        expect(arr).toEqual([1]);
     });
 
-    it('should return initial array', () => {
+    it('should return empty array', () => {
         //assign
         const arr = [];
 
@@ -31,10 +31,10 @@ describe('bubbleSort', () => {
         bubbleSortAlt(arr);
 
         //assert
-        expect(arr).toEqual(arr);
+        expect(arr).toEqual([]);
     });
 
-    it('should sort array', () => {
+    it('should sort array and return [-6, 0, 1, 4, 7]', () => {
         //assign
         const arr = [1, 4, 0, -6, 7];
 
@@ -45,7 +45,7 @@ describe('bubbleSort', () => {
         expect(arr).toEqual([-6, 0, 1, 4, 7]);
     });
 
-    it('should return initial array', () => {
+    it('should return [1]', () => {
         //assign
         const arr = [1];
 
@@ -53,10 +53,10 @@ describe('bubbleSort', () => {
         bubbleSort(arr);
 
         //assert
-        expect(arr).toEqual(arr);
+        expect(arr).toEqual([1]);
     });
 
-    it('should return initial array', () => {
+    it('should return empty array', () => {
         //assign
         const arr = [];
 
@@ -64,6 +64,6 @@ describe('bubbleSort', () => {
         bubbleSort(arr);
 
         //assert
-        expect(arr).toEqual(arr);
+        expect(arr).toEqual([]);
     });
 });

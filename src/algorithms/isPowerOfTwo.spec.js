@@ -1,7 +1,7 @@
 import { isPowerOfTwo } from "./isPowerOfTwo.js";
 
 describe('isPowerOfTwo', () => {
-    it('should return answer if given number is power of 2 or not', () => {
+    it('should return false', () => {
         //assign
         const testNumb = 0;
 
@@ -12,7 +12,7 @@ describe('isPowerOfTwo', () => {
         expect(answer).toBe(false);
     })
 
-    it('should return answer if given number is power of 2 or not', () => {
+    it('should return true', () => {
         //assign
         const testNumb = 1;
 
@@ -23,7 +23,7 @@ describe('isPowerOfTwo', () => {
         expect(answer).toBe(true);
     })
 
-    it('should return answer if given number is power of 2 or not', () => {
+    it('should return true', () => {
         //assign
         const testNumb = 2;
 
@@ -34,7 +34,7 @@ describe('isPowerOfTwo', () => {
         expect(answer).toBe(true);
     })
 
-    it('should return answer if given number is power of 2 or not', () => {
+    it('should return false', () => {
         //assign
         const testNumb = 57;
 
@@ -45,7 +45,7 @@ describe('isPowerOfTwo', () => {
         expect(answer).toBe(false);
     })
 
-    it('should return answer if given number is power of 2 or not', () => {
+    it('should return true', () => {
         //assign
         const testNumb = 2 ** 16;
 
@@ -56,7 +56,7 @@ describe('isPowerOfTwo', () => {
         expect(answer).toBe(true);
     })
 
-    it('should return answer if given number is power of 2 or not', () => {
+    it('should return false', () => {
         //assign
         const testNumb = 2 ** 16 + 2;
 
