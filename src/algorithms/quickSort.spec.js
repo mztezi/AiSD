@@ -1,6 +1,6 @@
 import { quickSort } from "./quickSort.js";
 
-describe('mergeSort', () => {
+describe('quickSort', () => {
     it('should return [-8, -5, -1, 0, 1, 2, 4]', () => {
         //assign
         const arr = [0, 1, -5, -8, -1, 4, 2];
