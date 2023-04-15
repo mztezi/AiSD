@@ -19,15 +19,15 @@ export function fibonacciI(n) {
         return n - 1;
     }
 
-    let n_minus_2 = 0;
-    let n_minus_1 = 1;
+    let nMinus2 = 0;
+    let nMinus1 = 1;
 
     for (let i = 4; i <= n; i++) {
-        n_minus_1 = n_minus_1 + n_minus_2;
-        n_minus_2 = n_minus_1 - n_minus_2;
+        nMinus1 = nMinus1 + nMinus2;
+        nMinus2 = nMinus1 - nMinus2;
     }
 
-    return n_minus_1 + n_minus_2;
+    return nMinus1 + nMinus2;
 }
 
 function fibonacciRSingleEl(n) {

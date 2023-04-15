@@ -25,17 +25,14 @@ export function binarySearchRec(arr, target, leftIndex = 0, rightIndex = (arr.le
         return -1;
     }
 
-    let middleIndex = Math.floor((rightIndex + leftIndex) / 2);
+    const middleIndex = Math.floor((rightIndex + leftIndex) / 2);
+    const valueAtMiddleIndex = arr[middleIndex];
 
-    if (arr[middleIndex] === target) {
+    if (valueAtMiddleIndex === target) {
         return middleIndex;
-    }
-
-    else if (arr[middleIndex] < target) {
+    } else if (valueAtMiddleIndex < target) {
         return binarySearchRec(arr, target, middleIndex + 1, rightIndex);
-    }
-
-    else if (arr[middleIndex] > target) {
+    } else if (valueAtMiddleIndex > target) {
         return binarySearchRec(arr, target, leftIndex, middleIndex - 1);
     }
 

@@ -1,75 +1,79 @@
 import { binarySearch, binarySearchRec } from "./binarySearch.js";
 
 describe('binarySearch', () => {
-    it('should return 1', () => {
-        //assign
-        const arr = [-7, 0, 1, 3, 5];
-        const target1 = 0;
+    describe('binarySearch', () => {
+        it('should return 1 for 0 in [-7, 0, 1, 3, 5]', () => {
+            //assign
+            const arr = [-7, 0, 1, 3, 5];
+            const target = 0;
 
-        //act
-        const indexOfTarget1 = binarySearch(arr, target1);
+            //act
+            const indexOfTarget = binarySearch(arr, target);
 
-        //assert
-        expect(indexOfTarget1).toEqual(1);
+            //assert
+            expect(indexOfTarget).toEqual(1);
+        });
+
+        it('should return -1 for 2 in [-7, 0, 1, 3, 5]', () => {
+            //assign
+            const arr = [-7, 0, 1, 3, 5];
+            const target = 2;
+
+            //act
+            const indexOfTarget = binarySearch(arr, target);
+
+            //assert
+            expect(indexOfTarget).toEqual(-1);
+        });
+
+        it('should return -1 for 2 in empty array', () => {
+            //assign
+            const arr = [];
+            const target = 2;
+
+            //act
+            const indexOfTarget = binarySearch(arr, target);
+
+            //assert
+            expect(indexOfTarget).toEqual(-1);
+        });
     })
 
-    it('should return -1', () => {
-        //assign
-        const arr = [-7, 0, 1, 3, 5];
-        const target2 = 2;
+    describe('binarySearchRec', () => {
+        it('should return 1 for 0 in [-7, 0, 1, 3, 5]', () => {
+            //assign
+            const arr = [-7, 0, 1, 3, 5];
+            const target = 0;
 
-        //act
-        const indexOfTarget2 = binarySearch(arr, target2);
+            //act
+            const indexOfTarget = binarySearchRec(arr, target);
 
-        //assert
-        expect(indexOfTarget2).toEqual(-1);
-    })
+            //assert
+            expect(indexOfTarget).toEqual(1);
+        });
 
-    it('should return 1', () => {
-        //assign
-        const arr = [-7, 0, 1, 3, 5];
-        const target1 = 0;
+        it('should return -1 for 2 in [-7, 0, 1, 3, 5]', () => {
+            //assign
+            const arr = [-7, 0, 1, 3, 5];
+            const target = 2;
 
-        //act
-        const indexOfTarget1 = binarySearchRec(arr, target1);
+            //act
+            const indexOfTarget = binarySearchRec(arr, target);
 
-        //assert
-        expect(indexOfTarget1).toEqual(1);
-    })
+            //assert
+            expect(indexOfTarget).toEqual(-1);
+        });
 
-    it('should return -1', () => {
-        //assign
-        const arr = [-7, 0, 1, 3, 5];
-        const target2 = 2;
+        it('should return -1 for 2 in empty array', () => {
+            //assign
+            const arr = [];
+            const target = 2;
 
-        //act
-        const indexOfTarget2 = binarySearchRec(arr, target2);
+            //act
+            const indexOfTarget = binarySearchRec(arr, target);
 
-        //assert
-        expect(indexOfTarget2).toEqual(-1);
-    })
-
-    it('should return -1', () => {
-        //assign
-        const arr = [];
-        const target2 = 2;
-
-        //act
-        const indexOfTarget2 = binarySearch(arr, target2);
-
-        //assert
-        expect(indexOfTarget2).toEqual(-1);
-    })
-
-    it('should return -1', () => {
-        //assign
-        const arr = [];
-        const target2 = 2;
-
-        //act
-        const indexOfTarget2 = binarySearchRec(arr, target2);
-
-        //assert
-        expect(indexOfTarget2).toEqual(-1);
+            //assert
+            expect(indexOfTarget).toEqual(-1);
+        });
     })
 });
