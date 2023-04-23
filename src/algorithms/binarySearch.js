@@ -1,4 +1,4 @@
-function binarySearch(arr, target) {
+export function binarySearch(arr, target) {
 
     let leftIndex = 0;
     let rightIndex = arr.length - 1;
@@ -6,16 +6,13 @@ function binarySearch(arr, target) {
 
     while (leftIndex <= rightIndex) {
         middleIndex = Math.floor((rightIndex + leftIndex) / 2);
+        const valueAtMiddleIndex = arr[middleIndex];
 
-        if (arr[middleIndex] < target) {
+        if (valueAtMiddleIndex < target) {
             leftIndex = middleIndex + 1;
-        }
-
-        else if (arr[middleIndex] > target) {
+        } else if (valueAtMiddleIndex > target) {
             rightIndex = middleIndex - 1;
-        }
-
-        else {
+        } else {
             return middleIndex;
         }
     }
@@ -23,22 +20,19 @@ function binarySearch(arr, target) {
     return -1;
 }
 
-function binarySearchRec(arr, target, leftIndex = 0, rightIndex = (arr.length - 1)) {
+export function binarySearchRec(arr, target, leftIndex = 0, rightIndex = (arr.length - 1)) {
     if (leftIndex > rightIndex) {
         return -1;
     }
 
-    let middleIndex = Math.floor((rightIndex + leftIndex) / 2);
+    const middleIndex = Math.floor((rightIndex + leftIndex) / 2);
+    const valueAtMiddleIndex = arr[middleIndex];
 
-    if (arr[middleIndex] === target) {
+    if (valueAtMiddleIndex === target) {
         return middleIndex;
-    }
-
-    else if (arr[middleIndex] < target) {
+    } else if (valueAtMiddleIndex < target) {
         return binarySearchRec(arr, target, middleIndex + 1, rightIndex);
-    }
-
-    else if (arr[middleIndex] > target) {
+    } else if (valueAtMiddleIndex > target) {
         return binarySearchRec(arr, target, leftIndex, middleIndex - 1);
     }
 

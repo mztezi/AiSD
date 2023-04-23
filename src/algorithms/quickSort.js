@@ -1,10 +1,10 @@
 import { swap } from "../common/swap.js";
 
-function partition(arr, low, high) {
-  const pivot = arr[high];
-  let i = low - 1;
+function partition(arr, startIndex, endIndex) {
+  const pivot = arr[endIndex];
+  let i = startIndex - 1;
 
-  for (let j = low; j < high; j++) {
+  for (let j = startIndex; j < endIndex; j++) {
     if (arr[j] < pivot) {
       i++;
       swap(arr, i, j);
@@ -12,18 +12,18 @@ function partition(arr, low, high) {
   }
 
   i++;
-  swap(arr, i, high);
+  swap(arr, i, endIndex);
 
   return i;
 }
 
-function quickSort(arr, low = 0, high = arr.length - 1) {
-  if (low >= high || low < 0) {
+export function quickSort(arr, startIndex = 0, endIndex = arr.length - 1) {
+  if (startIndex >= endIndex || startIndex < 0) {
     return;
   }
 
-  const pivot = partition(arr, low, high);
+  const pivot = partition(arr, startIndex, endIndex);
 
-  quickSort(arr, low, pivot - 1);
-  quickSort(arr, pivot + 1, high);
+  quickSort(arr, startIndex, pivot - 1);
+  quickSort(arr, pivot + 1, endIndex);
 }
