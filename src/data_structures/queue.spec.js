@@ -22,7 +22,7 @@ describe('Queue', () => {
         queue.enqueue(true);
 
         // assert
-        expect(queue.peek()).toEqual(true);
+        expect(queue.peek()).toEqual('a');
     });
 
     it("should return first element in the queue: 1", () => {
