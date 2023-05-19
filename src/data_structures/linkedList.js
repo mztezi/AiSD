@@ -21,15 +21,45 @@ class LinkedList {
 
     prepend(value) {
         const node = new Node(value);
-        const pointHead = (node) => this.head = node;
+
+        if (!this.isEmpty()) {
+            node.next = this.head;
+        }
+        this.head = node;
+        this.size++;
+    }
+
+    append(value) {
+        const node = new Node(value);
 
         if (this.isEmpty()) {
-            pointHead(node);
+            this.head = node;
         } else {
-            node.next = this.head;
-            pointHead(node);
+            let prev = this.head;
+            while (prev.next) {
+                prev = prev.next;
+            }
+            prev.next = node;
         }
         this.size++;
+    }
+
+    insert(value, index) {
+        if (index < 0 || index > this.size) {
+            return;
+        }
+        if (index === 0) {
+            this.prepend(value);
+        } else {
+            const node = new Node(value);
+            let prev = this.head;
+            for (let i = 0; i < index - 1; i++) {
+                prev = prev.next;
+            }
+            node.next = prev.next;
+            prev.next = node;
+            this.size++;
+        }
     }
 
     print() {
@@ -52,11 +82,15 @@ console.log('List is empty ', list.isEmpty());
 console.log('List size ', list.getSize());
 list.print();
 
-list.prepend(10);
-list.prepend(20);
-list.prepend(30);
+list.append(10);
+list.append(20);
+list.append(30);
 
 console.log('List is empty ', list.isEmpty());
 console.log('List size ', list.getSize());
 
+list.print();
+
+list.insert('A', 2);
+console.log('List size ', list.getSize());
 list.print();
