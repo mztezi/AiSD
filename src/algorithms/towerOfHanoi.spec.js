@@ -7,9 +7,9 @@ describe('towerOfHanoi', () => {
         const a = 'A';
         const b = 'B';
         const c = 'C';
+        spyOn(console, 'log');
 
         // act
-        spyOn(console, 'log');
         towerOfHanoi(num, a, c, b);
 
         // assert
