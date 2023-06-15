@@ -9,7 +9,7 @@ describe('Stack', () => {
         stack.push('a');
 
         // assert
-        expect(stack.peek()).toEqual('a');
+        expect(stack.peek()).toBe('a');
     });
 
     it("should return top element on the stack: true", () => {
@@ -22,7 +22,7 @@ describe('Stack', () => {
         stack.push(true);
 
         // assert
-        expect(stack.peek()).toEqual(true);
+        expect(stack.peek()).toBe(true);
     });
 
     it("should return top element on the stack: 1", () => {
@@ -36,7 +36,7 @@ describe('Stack', () => {
         stack.pop();
 
         // assert
-        expect(stack.peek()).toEqual(1);
+        expect(stack.peek()).toBe(1);
     });
 
     it("should return false for nonempty stack", () => {
@@ -49,7 +49,7 @@ describe('Stack', () => {
         stack.push(true);
 
         // assert
-        expect(stack.isEmpty()).toEqual(false);
+        expect(stack.isEmpty()).toBe(false);
     });
 
     it("should return 3 for stack consisting of 3 elements", () => {
@@ -62,6 +62,6 @@ describe('Stack', () => {
         stack.push(true);
 
         // assert
-        expect(stack.size()).toEqual(3);
+        expect(stack.size()).toBe(3);
     });
 })
